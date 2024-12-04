@@ -1,0 +1,228 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/light_blue"
+    android:padding="10dp">
+
+    <!-- Blue Header Section (Full width) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@color/blue"
+        android:padding="16dp">
+
+        <!-- Balance Section -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/rounded_card_white"
+            android:padding="16dp">
+
+            <!-- Balance Label -->
+            <TextView
+                android:id="@+id/tvBalanceLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Available Balance"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:paddingBottom="4dp" />
+
+            <!-- Balance Value -->
+            <TextView
+                android:id="@+id/tvBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00 ETH"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:fontFamily="monospace"
+                android:textColor="@android:color/white"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <!-- Buttons Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:spacing="16dp">
+
+            <!-- View Balance Button -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_margin="8dp">
+
+                <Button
+                    android:id="@+id/btnViewBalance"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:text=""
+                    android:contentDescription="View Balance"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/rounded_button_white"
+                    android:drawableTop="@drawable/ic_balance"
+                    android:drawablePadding="16dp"
+                    android:layout_gravity="center"
+                    android:padding="12dp" />
+
+                <!-- Text Label -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Balance"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/white"
+                    android:gravity="center"
+                    android:paddingTop="4dp" />
+            </LinearLayout>
+
+            <!-- Receive Ether Button -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_margin="8dp">
+
+                <Button
+                    android:id="@+id/btnReceiveEther"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:text=""
+                    android:contentDescription="Receive Ether"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/rounded_button_white"
+                    android:drawableTop="@drawable/ic_receive"
+                    android:drawablePadding="16dp"
+                    android:layout_gravity="center"
+                    android:padding="12dp" />
+
+                <!-- Text Label -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Receive"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/white"
+                    android:gravity="center"
+                    android:paddingTop="4dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- White Content Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:background="@android:color/white"
+        android:spacing="16dp">
+
+        <!-- Recipient Address Input -->
+        <EditText
+            android:id="@+id/etRecipientAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Recipient Address"
+            android:minHeight="56dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="@drawable/rounded_edittext_lightgray"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/dark_gray"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Amount Input -->
+        <EditText
+            android:id="@+id/etAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Amount (ETH)"
+            android:minHeight="56dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="@drawable/rounded_edittext_lightgray"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/dark_gray"
+            android:layout_marginBottom="32dp" />
+
+        <!-- Send Ether Button -->
+        <Button
+            android:id="@+id/btnSendEther"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send Ether"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/rounded_button_blue"
+            android:layout_gravity="center"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:layout_marginBottom="32dp" />
+
+        <!-- Public Address Section -->
+        <TextView
+            android:id="@+id/tvPublicAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Public Address: "
+            android:textSize="16sp"
+            android:textColor="@color/dark_blue"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:background="@drawable/rounded_edittext_lightgray"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Copy Address Button -->
+        <Button
+            android:id="@+id/btnCopyAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Copy Address"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/rounded_button_blue"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp" />
+
+        <!-- Error Message Section -->
+        <TextView
+            android:id="@+id/tvError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:textSize="16sp"
+            android:textColor="@android:color/holo_red_dark"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp"
+            android:contentDescription="Error Message" />
+
+        <!-- Progress Bar -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="center" />
+    </LinearLayout>
+</LinearLayout>

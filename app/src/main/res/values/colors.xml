@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="background_color">#F5F5F5</color>
+    <color name="primary_text_color">#212121</color>
+    <color name="secondary_text_color">#757575</color>
+    <color name="button_color">#6200EE</color>
+    <color name="light_blue">#E3F2FD</color>
+    <color name="dark_blue">#1565C0</color>
+    <color name="dark_gray">#757575</color>
+    <color name="purple_500">#9C27B0</color>
+    <color name="blue">#2196F3</color>
+    <color name="light_gray">#D3D3D3</color>
+
+
+
+</resources>
